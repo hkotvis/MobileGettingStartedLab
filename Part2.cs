@@ -1,146 +1,130 @@
-﻿using System;
+﻿//using System;
+//using System.Collections;
+// // Uncomment this and comment out other Program.cs to run this one
+//public class Person
+//{
+//    public string Name { get; set; }
+//    public int Age { get; set; }
+//    public int Id { get; set; }
+//    public enum Program { ComputerScience, Marketing, Nursing, Accounting }
+//    public class Student : Person
+//    {
+//        public int CreditsEarned { get; set; }
+//    }
 
-public class Person
-{
-    private string name;
-    private int age;
-    private int id;
-    private enum Program { }
-    public class Student : Person
-    {
-        public int creditsEarned;
+//    public class Teacher : Person
+//    {
+//        public int YearsTeaching { get; set; }
+//    }
 
-        public string GetName()
-        {
-            return this.name;
-        }
-        public void SetName(string inputName)
-        {
-            this.name = inputName;
-        }
-        public int GetAge()
-        {
-            return this.age;
-        }
-        public void SetAge(int inputAge)
-        {
-            this.age = inputAge;
-        }
-        public int GetId()
-        {
-            return this.id;
-        }
-        public void SetId(int inputId)
-        {
-            this.id = inputId;
-        }
-        public int GetCredits()
-        {
-            return this.creditsEarned;
-        }
-        public void SetCredits(int inputCredits)
-        {
-            this.creditsEarned = inputCredits;
-        }
-    }
+//}
 
 
-    public class Teacher : Person
-    {
-        public int yearsTeaching;
-        public string GetName()
-        {
-            return this.name;
-        }
-        public void SetName(string inputName)
-        {
-            this.name = inputName;
-        }
-        public int GetAge()
-        {
-            return this.age;
-        }
-        public void SetAge(int inputAge)
-        {
-            this.age = inputAge;
-        }
-        public int GetId()
-        {
-            return this.id;
-        }
-        public void SetId(int inputId)
-        {
-            this.id = inputId;
-        }
-        public int GetYears()
-        {
-            return this.yearsTeaching;
-        }
-        public void SetYears(int inputYears)
-        {
-            this.yearsTeaching = inputYears;
-        }
-    }
+//public class Example
+//{
+//    public static void Main(string[] args)
+//    {
+//        Person person = new Person();
+//        ArrayList studentAL = new ArrayList();
+//        ArrayList teacherAL = new ArrayList();
+//        var student = new Person.Student();
+//        var teacher = new Person.Teacher();
+//        int choice = 0;
+//        while (choice != 3)
+//        {
+//            Console.Write("Please enter a:  1) Student, 2) Teacher, 3) End: ");
+//            try
+//            {
+//                choice = Int32.Parse(Console.ReadLine());
+//            }
+//            catch (Exception e)
+//            {
+//                Console.Write(e);
+//            }
 
-}
+//            if (choice == 1)
+//            {            
+//                Console.Write("Name: ");
+//                student.Name = Console.ReadLine();
+                
+//                Console.Write("Age: ");
+//                student.Age = Int32.Parse(Console.ReadLine());
+//                Console.Write("Student ID: ");
+//                student.Id = Int32.Parse(Console.ReadLine());
+//                Console.Write("Program- 1) Computer Science, 2) Marketing, 3) Nursing, 4) Accounting: ");
+//                int inputProgram = Int32.Parse(Console.ReadLine());
+//                Console.Write("Credits Earned: ");
+//                student.CreditsEarned = (Int32.Parse(Console.ReadLine()));
+
+//                studentAL.Add(student.Name);
+//                studentAL.Add(student.Age);
+//                studentAL.Add(student.Id);
+//                if (inputProgram == 1)
+//                {
+//                    studentAL.Add(Person.Program.ComputerScience);
+//                }
+//                else if (inputProgram == 2)
+//                {
+//                    studentAL.Add(Person.Program.Marketing);
+//                }
+//                else if (inputProgram == 3)
+//                {
+//                    studentAL.Add(Person.Program.Nursing);
+//                }
+//                else if (inputProgram == 4)
+//                {
+//                    studentAL.Add(Person.Program.Accounting);
+//                }
+//                studentAL.Add(student.CreditsEarned);
+//            }
+//            else if (choice == 2)
+//            {
+//                Console.Write("Name: ");
+//                teacher.Name = Console.ReadLine();
+//                Console.Write("Age: ");
+//                teacher.Age = Int32.Parse(Console.ReadLine());
+//                Console.Write("Faculty ID: ");
+//                teacher.Id = Int32.Parse(Console.ReadLine());
+//                Console.Write("Program- 1) Computer Science, 2) Marketing, 3) Nursing, 4) Accounting: ");
+//                int inputProgram = Int32.Parse(Console.ReadLine());
+//                Console.Write("Years of Service: ");
+//                teacher.YearsTeaching = (Int32.Parse(Console.ReadLine()));
+
+//                teacherAL.Add(teacher.Name);
+//                teacherAL.Add(teacher.Age);
+//                teacherAL.Add(teacher.Id);
+//                if (inputProgram == 1)
+//                {
+//                    teacherAL.Add(Person.Program.ComputerScience);
+//                }
+//                else if (inputProgram == 2)
+//                {
+//                    teacherAL.Add(Person.Program.Marketing);
+//                }
+//                else if (inputProgram == 3)
+//                {
+//                    teacherAL.Add(Person.Program.Nursing);
+//                }
+//                else if (inputProgram == 4)
+//                {
+//                    teacherAL.Add(Person.Program.Accounting);
+//                }
+//                teacherAL.Add(teacher.YearsTeaching);
+
+//            }
+//        }
+
+//        foreach (Object obj in studentAL) {
+//            Console.Write("   {0}", obj );
+//        }           
+//        Console.WriteLine();
+//        foreach (Object obj in teacherAL)
+//        {
+//            Console.Write("   {0}", obj);
+//        }
+//        Console.ReadLine();
 
 
-
-public class Example
-{
-    public static void Main(string[] args)
-    {
-        int choice = 0;
-        var student = new Person.Student();
-        var teacher = new Person.Teacher();
-        while (choice != 3)
-        {
-            Console.Write("Please enter a:  1) Student, 2) Teacher, 3) End: ");
-            try
-            {
-                choice = Int32.Parse(Console.ReadLine());
-            }
-            catch (Exception e)
-            {
-                Console.Write(e);
-            }
-
-            if (choice == 1)
-            {
-                Console.Write("Name: ");
-                student.SetName(Console.ReadLine());
-                Console.Write("Age: ");
-                student.SetAge(Int32.Parse(Console.ReadLine()));
-                Console.Write("Student ID: ");
-                student.SetId(Int32.Parse(Console.ReadLine()));
-                Console.Write("Program: ");
-                // student.SetName(Console.ReadLine());
-                Console.Write("Credits Earned: ");
-                student.SetCredits(Int32.Parse(Console.ReadLine()));
-
-            }
-            else if (choice == 2)
-            {
-                Console.Write("Name: ");
-                teacher.SetName(Console.ReadLine());
-                Console.Write("Age: ");
-                teacher.SetAge(Int32.Parse(Console.ReadLine()));
-                Console.Write("Faculty ID: ");
-                teacher.SetId(Int32.Parse(Console.ReadLine()));
-                Console.Write("Program: ");
-                // student.SetName(Console.ReadLine());
-                Console.Write("Years of Service: ");
-                teacher.SetYears(Int32.Parse(Console.ReadLine()));
-
-            }
-        }
-
-         Console.WriteLine(student.GetName() + " " + student.GetAge() + " " + student.GetId());
-        Console.WriteLine(teacher.GetName() + " " + teacher.GetAge() + " " + teacher.GetId());
-        Console.ReadLine();
-
-
-        var b = new Person.Teacher();
-        Console.WriteLine(b.GetAge());
-    }
-}
+       
+//    }
+//}
